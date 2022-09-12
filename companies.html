@@ -6,6 +6,7 @@
     <script src="https://www.googletagmanager.com/gtag/js?id=G-G8PVHW6XXL"></script>
     <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date());gtag('config','G-G8PVHW6XXL');</script>
     <link href="./cdn/bootstrap.min.css" rel="stylesheet" />
+    <link href="./cdn/select2.min.css" rel="stylesheet" />
     <link href="ui.css" rel="stylesheet" />
     <link href="styles2.css" rel="stylesheet" />
     <link href="shop.css" rel="stylesheet" />
@@ -40,7 +41,12 @@
       </div>
     </header>
     <div class="container">
-      <h2 class="myCss pt-2 pb-2"></h2>
+      <h2 class="myCss pt-2 pb-2">
+        <span class="fw-light"></span> </h2>
+    </div>
+    <div class="container" style="">
+      <p class="h4 fw-light text-dark opacity-70 line-height-base">Type into the search bar to filter current vacancies</p>
+      <div id="dv1"></div>
     </div>
     <div class="container">
       <input class="form-control" id="myInput" type="text" placeholder="Search.." />
@@ -83,7 +89,7 @@
                 <p class="card-text">      Targeting the most polluting applications: textiles, inks, polymers, paints and coatings.</p>
                 <p class="card-text">      Developing an initial product line, first products planned to be on the market in the next two to three years</p>
                 <p class="card-text">      Awarded world wide innovation challenge, awards</p>
-                <p class="card-text">      Vastly reduce required resources and generation of polluting and toxic chemicals</p>
+                <p class="card-text">      Vastly reduce required resources and the generation of polluting and toxic chemicals</p>
                 <p class="card-text">      Renewable end product</p>
                 <p class="card-text">    </p>
                 <h5>Marketing</h5>
@@ -110,14 +116,6 @@
               </div>
             </div>
             <div class="card-body">
-              <h5>Network</h5>
-              <table class="T table Cat">
-                <tr>
-                  <th>Direction</th>
-                  <th>Partner</th>
-                  <th>Type</th>
-                </tr>
-              </table>
               <h5>Products</h5>
               <table class="wideTable">
                 <tr>
@@ -133,14 +131,6 @@
                   <td>Unknown</td>
                 </tr>
               </table>
-            </div>
-            <div class="card-footer text-muted d-flex flex-row justify-content-between align-items-center">
-              <h5>Industries</h5>
-              <div></div>
-            </div>
-            <div class="card-footer text-muted d-flex flex-row justify-content-between align-items-center">
-              <h5>Services</h5>
-              <div></div>
             </div>
           </div>
         </div>
@@ -180,14 +170,6 @@
               </div>
             </div>
             <div class="card-body">
-              <h5>Network</h5>
-              <table class="T table Cat">
-                <tr>
-                  <th>Direction</th>
-                  <th>Partner</th>
-                  <th>Type</th>
-                </tr>
-              </table>
               <h5>Products</h5>
               <table class="wideTable">
                 <tr>
@@ -209,10 +191,6 @@
               <div>
                 <span class="tagSpan" style="background-color:#006fcd">Food</span>
               </div>
-            </div>
-            <div class="card-footer text-muted d-flex flex-row justify-content-between align-items-center">
-              <h5>Services</h5>
-              <div></div>
             </div>
           </div>
         </div>
@@ -278,9 +256,11 @@
                 <tr>
                   <td>From</td>
                   <td>Ginkgo Bioworks</td>
-                  <td style="background-color:#cc66ff">Strain Engineering</td>
+                  <td>Strain_Engineering</td>
                 </tr>
               </table>
+            </div>
+            <div class="card-body">
               <h5>Products</h5>
               <table class="wideTable">
                 <tr>
@@ -303,9 +283,96 @@
                 <span class="tagSpan" style="background-color:#6fcd00">Beauty</span>
               </div>
             </div>
-            <div class="card-footer text-muted d-flex flex-row justify-content-between align-items-center">
-              <h5>Services</h5>
-              <div></div>
+          </div>
+        </div>
+        <div class="container">
+          <div data-all="card" data-unique="" class="card mb-3 border border-success ">
+            <div class="row g-0">
+              <div class="col-md-4 vCenterImagePlease rounded">
+                <span class="helper rounded">
+                  <a href="https://www.pivotbio.com/">
+                    <img class="bd-placeholder-img img-fluid rounded-start" src="pivot_bio.svg" />
+                  </a>
+                </span>
+              </div>
+            </div>
+            <div class="col-md-12" style="border-top: 1px solid #A9A9A9">
+              <div class="card-body">
+                <div class="d-flex flex-column flex-md-row justify-content-between">
+                  <h4 id="pivotbio" class="card-title searchText">Pivot Bio</h4>
+                  <h5>Berkeley, CA, USA</h5>
+                </div>
+                <h5>Summary</h5>
+                <p class="card-text"></p>
+                <p class="card-text">      Significant future challenges for feeding an increasing human population, current population could not be sustained without fertiliser.</p>
+                <p class="card-text">      </p>
+                <p class="card-text">      Extreme environmental impacts from the current process for fertiliser production; energy, co2, nitrous oxide, water pollution, phosphate reserve depletion.</p>
+                <p class="card-text">      </p>
+                <p class="card-text">      Poor performance, significant loss of fertiliser due to volatilization and leaching, high variability dependent on topology and weather. </p>
+                <p class="card-text">      </p>
+                <p class="card-text">      Solution is to directly apply microbes soil, these species produce nitrogenase, an enzyme that takes nitrogen from the atmosphere and converts it to ammonia, which the plants can take up directly.</p>
+                <p class="card-text">      </p>
+                <p class="card-text">      This natural ability of soil microbes for fixing nitrogen has been lost since the introduction of fertiliser.</p>
+                <p class="card-text">      </p>
+                <p class="card-text">      Technology developed to reverse engineer the enzyme encoding dna and re-engineer the microbes to reestablish this capability.</p>
+                <p class="card-text">      </p>
+                <p class="card-text">    </p>
+                <h5>Marketing</h5>
+                <p class="card-text"></p>
+                <p class="card-text">      Solved one of the toughest challenges facing modern agriculture - how to replace synthetic nitrogen with something better. Our microbes empower the world's farmers to be more productive, profitable, and sustainable.</p>
+                <p class="card-text"></p>
+                <p class="card-text">      Pivot Bio has focused on developing its proprietary microbial technology that supplies the daily nitrogen cereal crops require.</p>
+                <p class="card-text">      </p>
+                <p class="card-text">      Pivot Bio microbes are specially designed to work on cereal crops, some of the most nitrogen hungry crops we grow. Corn, wheat, and rice account for about half of the applied synthetic nitrogen globally.</p>
+                <p class="card-text">      </p>
+                <p class="card-text">      This nitrogen is transferred directly to the plant. These nutrients aren't degraded which means virtually no pollution from volatilization and leaching.</p>
+                <p class="card-text">      </p>
+                <p class="card-text">    </p>
+                <h6 class="words">#Sustainability</h6>
+                <p class="card-text"></p>
+                <p class="card-text">      Without fertiliser, the world's food production would be cut by 48%. By 2050, growers will have to provide 56% more calories to the world to feed a population that nears 10 billion.</p>
+                <p class="card-text"></p>
+                <p class="card-text">      Growers rely on synthetic fertiliser to supplement soil nitrogen and boost yields, but this input negatively impacts our environment in two ways. First, it consumes substantial non-renewable energy sources to create both the intense heat and pressure required for production and provide the necessary elements of the reaction  Second, synthetic nitrogen fertiliser is quickly lost to the environment through volatilization and leaching.</p>
+                <p class="card-text">      </p>
+                <p class="card-text">      Ammonia production consumes 3% of the world's energy, and invasive mining has nearly stripped the world of its phosphate reserves.</p>
+                <p class="card-text">      </p>
+                <p class="card-text">      Once produced, a small portion of chemical fertiliser decomposes into nitrous oxide and becomes a greenhouse gas 300 times more potent than CO2. It's responsible for about 5% of global warming.</p>
+                <p class="card-text">      </p>
+                <p class="card-text">      In addition, rains wash excess fertiliser into streams and rivers, causing algal blooms that suffocate fish and aquatic life.</p>
+                <p class="card-text">      </p>
+                <p class="card-text">      Our microbes can be grown on sugar and water with next to no carbon emissions, and the nitrogen they produce stays at the root of the plant where it belongs.</p>
+                <p class="card-text">      This fermentation replaces the Haber-Bosch Process, the energy-intense production process for creating synthetic nitrogen, and reduces potential GHG emissions by 98%.</p>
+                <p class="card-text">              </p>
+                <h6 id="proven" class="words">#Science</h6>
+                <p class="card-text"></p>
+                <p class="card-text">      Some soil microbes can break down atmospheric nitrogen and create a usable form for plants. However, that inherent ability has been rendered dormant by a century of synthetic chemical fertiliser use. Pivot Bio is able to improve the ability of microbes to break down that atmospheric nitrogen and change it into a usable form by activating their own DNA.</p>
+                <p class="card-text"></p>
+                <p class="card-text">We map trillions of interactions between living organisms in the soil to identify the rare microbes with the right internal DNA software to produce nitrogen.</p>
+                <p class="card-text"></p>
+                <p class="card-text">We've developed a powerful technology called computationally-guided microbe remodelling.</p>
+                <p class="card-text"></p>
+                <p class="card-text">We reverse engineer the DNA software that makes each microbe tick, and we evaluate billions of ways to reprogram the genetic blueprint to improve how much nitrogen each microbe produces.</p>
+                <p class="card-text"></p>
+                <p class="card-text">Sensing the nutrient needs of the crop, our reprogrammed microbes reliably produce the right levels of nitrogen in any weather and throughout the growing season.</p>
+                <p class="card-text">    </p>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5>Products</h5>
+              <table class="wideTable">
+                <tr>
+                  <th>Product</th>
+                  <th>Organism</th>
+                  <th>Type</th>
+                  <th>Species</th>
+                </tr>
+                <tr>
+                  <td>ProveN</td>
+                  <td>Bacteria</td>
+                  <td>Organism</td>
+                  <td>Gammaproteobacteria</td>
+                </tr>
+              </table>
             </div>
           </div>
         </div>
@@ -328,5 +395,6 @@
   </body>
   <script src="./cdn/jquery-3.3.1.min.js"></script>
   <script src="./cdn/bootstrap.bundle.min.js"></script>
+  <script src="./cdn/select2.min.js"></script>
   <script>setupRadioButtonFilterHandlerWithClassMultiple('btn-check', 'card');initialiseInputBox('#myInput',filterNow);</script>
 </html>
