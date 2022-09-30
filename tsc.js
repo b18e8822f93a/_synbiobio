@@ -201,6 +201,8 @@ function checkQueryString() {
     const params = Object.fromEntries(urlSearchParams.entries());
     const firstKey = Object.keys(params)[0];
     if (firstKey != null) {
+        let element = document.querySelector("#myInput");
+        element.value = [firstKey];
         filterNow([firstKey]);
     }
 }
