@@ -44,8 +44,20 @@
         <span class="fw-light"></span> </h2>
     </div>
     <div class="container">
-      <div class="card mb-3 border-success">
-        <div class="card-header border-success">Careers</div>
+      <div class="container p-1 mt-1 mb-2">
+        <div class="btn-group btn-group-lg btn-group-justified w-100" role="group">
+          <input class="rbIndustry btn-check" id="btnradiorbIndustry0" type="radio" name="rbIndustry" value="All" autocomplete="off" checked="checked"></input>
+          <label class="btn btn-outline-success" for="btnradiorbIndustry0">All</label>
+          <input class="rbIndustry btn-check" id="btnradiorbIndustry1" type="radio" name="rbIndustry" value="SynbioBio" autocomplete="off"></input>
+          <label class="btn btn-outline-success" for="btnradiorbIndustry1">SynbioBio</label>
+          <input class="rbIndustry btn-check" id="btnradiorbIndustry2" type="radio" name="rbIndustry" value="Synbuyo" autocomplete="off"></input>
+          <label class="btn btn-outline-success" for="btnradiorbIndustry2">Synbuyo</label>
+          <input class="rbIndustry btn-check" id="btnradiorbIndustry3" type="radio" name="rbIndustry" value="SynbioCareers" autocomplete="off"></input>
+          <label class="btn btn-outline-success" for="btnradiorbIndustry3">SynbioCareers</label>
+        </div>
+      </div>
+      <div class="card mb-3" data-all="card" data-unique="synbiocareers" style="border-color:#f5c242">
+        <div class="card-header" style="border-color:#f5c242">Careers</div>
         <div class="card-body">
           <p class="card-text">Today we have launched SynbioCareers.com, quite a simply a listing of industry jobs available within the field of synthetic biology.
 </p>
@@ -63,11 +75,11 @@
         </div>
         <div class="card-footer text-muted d-flex flex-row justify-content-between align-items-center">
           <span>September 30th 2022</span>
-          <span class="tagSpan" style="background-color:#f5c242">synbiocareers.com</span>
+          <a class="tagSpan" style="background-color:#f5c242; margin-left:3px" href="https://www.SynbioCareers.com">SynbioCareers.com</a>
         </div>
       </div>
-      <div class="card mb-3 border-success">
-        <div class="card-header border-success">New Site SynbioBio</div>
+      <div class="card mb-3" data-all="card" data-unique="synbiobio" style="border-color:#85adad">
+        <div class="card-header" style="border-color:#85adad">New Site SynbioBio</div>
         <div class="card-body">
           <p class="card-text">Hi, in quick succession we have created a new website to act as a listing for all Synthetic Biology companies including those that do not necessarily produce consumer products. Reading so many websites and articles as part of our work for SynBuyo.com we've realised that actually most do not.
 </p>
@@ -89,11 +101,11 @@
         </div>
         <div class="card-footer text-muted d-flex flex-row justify-content-between align-items-center">
           <span>August 31st 2022</span>
-          <span class="tagSpan" style="background-color:#3399ff">synbiobio.com</span>
+          <a class="tagSpan" style="background-color:#85adad; margin-left:3px" href="https://www.SynbioBio.com">SynbioBio.com</a>
         </div>
       </div>
-      <div class="card mb-3 border-success">
-        <div class="card-header border-success">First Post</div>
+      <div class="card mb-3" data-all="card" data-unique="synbuyo" style="border-color:#3399ff">
+        <div class="card-header" style="border-color:#3399ff">First Post</div>
         <div class="card-body">
           <p class="card-text">Welcome to the SynBuyo website, effectively a listing of available consumer products that have been produced through the application of the engineering practices of Synthetic Biology.
 </p>
@@ -115,7 +127,7 @@
         </div>
         <div class="card-footer text-muted d-flex flex-row justify-content-between align-items-center">
           <span>July 11th 2022</span>
-          <span class="tagSpan" style="background-color:#85adad">synbuyo.com</span>
+          <a class="tagSpan" style="background-color:#3399ff; margin-left:3px" href="https://www.Synbuyo.com">Synbuyo.com</a>
         </div>
       </div>
     </div>
@@ -136,4 +148,5 @@
   </body>
   <script src="./cdn/jquery-3.3.1.min.js"></script>
   <script src="./cdn/bootstrap.bundle.min.js"></script>
+  <script>setupRadioButtonFilterHandlerWithClass('btn-check', 'card');</script>
 </html>
