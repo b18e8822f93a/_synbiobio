@@ -200,3 +200,13 @@ footer .content-bottom .footer-references a:hover {
 .two-button-header {
   flex-wrap: wrap;
 }
+
+.opinion {
+  font-style: italic;
+}
+
+.extranote {}
+
+.heading {
+  background-color: rgb(0, 68, 255);
+}

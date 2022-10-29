@@ -127,12 +127,10 @@ function addChart(series, containerName, chartOptions) {
     var container = $("#" + containerName);
     container.highcharts(fullOpts);
 }
-// https://stackoverflow.com/questions/12875486/what-is-the-algorithm-to-create-colors-for-a-heatmap
 function percentageToHsl(percentage, hue0, hue1) {
     var hue = (percentage * (hue1 - hue0)) + hue0;
     return 'hsl(' + hue + ', 100%, 50%)';
 }
-// https://www.w3schools.com/colors/colors_hsl.asp
 function percentageToWhite(percentage, hue0) {
     var L = 100 - (percentage * 50);
     return 'hsl(' + hue0 + ', 100%, ' + L + '%)';
@@ -140,21 +138,15 @@ function percentageToWhite(percentage, hue0) {
 function differenceLabelWithNow(earlierDate) {
     return differenceLabel(Date.now(), earlierDate);
 }
-// https://stackoverflow.com/questions/13903897/javascript-return-number-of-days-hours-minutes-seconds-between-two-dates
 function differenceLabel(nowDate, earlierDate) {
-    // get total seconds between the times
     var delta = Math.abs(nowDate - earlierDate) / 1000;
-    // calculate (and subtract) whole days
     var days = Math.floor(delta / 86400);
     delta -= days * 86400;
-    // calculate (and subtract) whole hours
     var hours = Math.floor(delta / 3600) % 24;
     delta -= hours * 3600;
-    // calculate (and subtract) whole minutes
     var minutes = Math.floor(delta / 60) % 60;
     delta -= minutes * 60;
-    // what's left is seconds
-    var seconds = Math.round(delta % 60); // in theory the modulus is not required
+    var seconds = Math.round(delta % 60);
     let label = `${days} Days, ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds ago`;
     return label;
 }
@@ -207,25 +199,18 @@ function checkQueryString() {
     }
 }
 function filterNow(valuesset) {
-    console.log(valuesset, "hi mate");
     const values = Array.from(valuesset);
     if (values.length === 0) {
-        $("#myDIV .container").filter(function () {
+        $("#myDIV .col").filter(function () {
             $(this).slideDown();
         });
         return;
     }
-    //  if (values.length > 0)
-    $("#myDIV .container").filter(function () {
+    $("#myDIV .col").filter(function () {
         var theCurrentText = jQuery(".searchText", this).text().toLowerCase();
-        console.log(theCurrentText, "theCurrentText");
         var hello = values.map(o => jQuery(".searchText", this).text().toLowerCase().indexOf(o) > -1);
-        console.log($(this).text(), "AAA");
-        console.log(hello, "hello");
-        var theHellos = hello.every(o => o); // so have AND here, swtich to .some for OR
-        console.log(theHellos, "BBB");
+        var theHellos = hello.every(o => o);
         if (theHellos)
-            //$(this).toggle(theHellos, "slow");
             $(this).slideDown();
         else
             $(this).slideUp();
@@ -239,7 +224,11 @@ function initialiseInputBox(inputBoxName, filterContinuation) {
             .filter(o => (o.length >= 3));
         var set = new Set(values);
         filterContinuation(set);
-        console.log(set, "here peeps");
+    });
+    $('input[type=search]').on('search', function () {
+        $("#myDIV .col").filter(function () {
+            $(this).slideDown();
+        });
     });
 }
 let mySet = new Set();
@@ -265,7 +254,6 @@ var LineChartModule;
             enabled: false
         },
         xAxis: {
-            // labels: { enabled: false },
             type: 'category'
         },
         yAxis: {
@@ -313,7 +301,6 @@ function initialise(dataIn) {
     $("#sel0").on("select2:unselect", function (e) {
         var data1 = e.params.data.text;
         mySet.delete(data1);
-        console.log(mySet);
         filterNow(mySet);
     });
     $("#sel0").on("select2:select", function (e) {
@@ -323,7 +310,6 @@ function initialise(dataIn) {
         filterNow(mySet);
     });
 }
-// );
 function addSelectBox(containerId) {
     var sel = document.createElement("select");
     sel.setAttribute("id", "sel0");
@@ -336,7 +322,6 @@ function addSelectBox(containerId) {
     document.getElementById(containerId).appendChild(sel);
 }
 function makeRepeatableDiv(n, formElementKey, includeButton) {
-    //let input1 = document.createElement("input");
     let div5 = document.createElement("div");
     let div4 = document.createElement("div");
     let div3 = document.createElement("div");
@@ -358,8 +343,6 @@ function makeRepeatableDiv(n, formElementKey, includeButton) {
     div3.className = "flex-container clName mb-1 mt-3";
     div3.id = "dvSection" + n;
     if (typeof formElementKey != 'undefined' && formElementKey !== '') {
-        //div4.innerHTML = "Assigned to " + formElementKey;
-        //div3.append(input1);
     }
     div4.className = "form-text text-muted";
     div5.append(div3);
@@ -438,17 +421,12 @@ function getDataNoGroups(tags) {
     ];
     return data;
 }
-// declare var $: any;
 console.log("site.js hello is included");
 function setupRadioButtonFilterHandlerWithKeyLookup(buttonClass, cellClass, options) {
-    console.log("setting up setupRadioButtonFilterHandlerWithKeyLookup ");
-    //add event for the radio buttons, get the id, get the key, hide all, show with key
     $("." + buttonClass).click(function () {
         var theValue = $(this).val();
         var key = options[theValue];
-        console.log(theValue);
         $('.' + cellClass).hide();
-        // $('.rolesection[data-slider=' + key + ']').show();
         $('.' + cellClass + '[data-slider*=' + key + ']').show();
         console.log("here in the click event");
     });
@@ -456,7 +434,6 @@ function setupRadioButtonFilterHandlerWithKeyLookup(buttonClass, cellClass, opti
 function setupRadioButtonFilterHandlerWithClass(buttonClass, cellClass) {
     $("." + buttonClass).click(function () {
         let theValue = $(this).val().toLowerCase();
-        console.log("clicked button", theValue);
         if (theValue.toLowerCase() == 'all')
             $("div[data-all=" + cellClass + "]").show();
         else
@@ -470,27 +447,14 @@ function setupRadioButtonFilterHandlerWithClass(buttonClass, cellClass) {
 function setupRadioButtonFilterHandlerWithClassMultiple(buttonClass, cellClass) {
     $("." + buttonClass).click(function () {
         let hool = $(".btn-check:checked").toArray().map(o => o.value.toLowerCase());
-        console.log(hool);
         let theValue = $(this).val().toLowerCase();
-        // arrayOfDivs = $("div[data-all=" + cellClass + "][data-unique*=" + theValue + "]").toArray();
-        // console.log(arrayOfDivs);
-        //  console.log(theValue);
-        // arrayOfDivs.forEach(o => {
-        //     o.show.push(theValue);
-        // })
-        // z.filter("[data-unique*='open']" )
-        // console.log(arrayOfDivs);
         let removedAll = hool.filter(x => x != "all");
-        console.log(removedAll);
         if (removedAll.length == 0)
             $("div[data-all=" + cellClass + "]").show();
         else {
             $("div[data-all=" + cellClass + "]").hide();
-            // removedAll.forEach(x => {
             let testing = removedAll.reduce((previousValue, currentValue) => previousValue.filter("[data-unique*='" + currentValue + "']"), $("div[data-all=" + cellClass + "]"));
-            console.log(testing),
-                testing.show();
-            // });
+            testing.show();
         }
     });
 }
@@ -511,7 +475,6 @@ function setupPies() {
         circle.setAttribute("cy", 16);
         circle.setAttribute("stroke-dasharray", p + " 100");
         svg.setAttribute("viewBox", "0 0 32 32");
-        // title.textContent = pie.textContent;
         pie.textContent = '';
         svg.setAttribute("class", "piecharts");
         svg.appendChild(title);
@@ -530,11 +493,8 @@ var TableFilterModule;
     }
     TableFilterModule.initialiseNumberInputBox = initialiseNumberInputBox;
     function filterTable(minV) {
-        //## child combinator selector - direct children of a parent    
         [...$("table > tbody > tr")].forEach(function (x) {
-            console.log($(x));
             let vol = parseFloat($(".searchText", $(x)).text().toLowerCase());
-            console.log(vol);
             if (vol > minV)
                 $(x).slideDown();
             else
@@ -546,9 +506,7 @@ var TableFilterModule;
 function rssUrlSubmission() {
     let text = $('#fname').val();
     console.log(text);
-    $.get(`https://script.google.com/macros/s/AKfycbx5hs19W2lPsXwKIJOsuacm8O6vUI-Dd7JKflBJc61SAq_rvb3wBpX_gy5ACy_voyN4hg/exec?page=${text}&callback=?`
-    // 'https://script.google.com/macros/s/AKfycbzyEKMIUxQ0oamiY2znurUfmZk8Fb_F4yOoyjtoO5pK/dev?page=index123&callback=?'
-    );
+    $.get(`https://script.google.com/macros/s/AKfycbx5hs19W2lPsXwKIJOsuacm8O6vUI-Dd7JKflBJc61SAq_rvb3wBpX_gy5ACy_voyN4hg/exec?page=${text}&callback=?`);
     event.preventDefault();
     event.stopPropagation();
     var thanksBox = document.getElementById("dvThanks");
