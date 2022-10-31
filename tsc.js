@@ -459,6 +459,45 @@ function setupRadioButtonFilterHandlerWithClassMultiple(buttonClass, cellClass) 
     });
 }
 ;
+function hideShowCard(val, cellClass, dataSelector) {
+    let theValue = val.toLowerCase();
+    if (theValue.toLowerCase() == 'false')
+        $("div[data-all=" + cellClass + "]").show();
+    else {
+        $("div[data-all=" + cellClass + "]").hide();
+        let theValueX = $("div[data-" + dataSelector + "=" + val + "]");
+        $(theValueX).show();
+    }
+}
+;
+function addNewToggleButtonFilter() {
+    var checkbox = document.querySelector("input[name=cbIsNewOnly]");
+    if (typeof checkbox != 'undefined') {
+        checkbox.addEventListener('change', function () {
+            if (this.checked) {
+                console.log("Checkbox is checked..");
+                hideShowCard("true", "card", "new");
+            }
+            else {
+                console.log("Checkbox is not checked..");
+                hideShowCard("false", "card", "new");
+            }
+        });
+    }
+}
+function coupledButtonAndInput() {
+    let checkbox = document.querySelector("input[name=cbIsNewOnly]");
+    let element = document.querySelector("#myInput");
+    $("#myInput").on("keyup", function () {
+        console.log("here but");
+    });
+    if (typeof checkbox != 'undefined') {
+        checkbox.addEventListener('change', function () {
+            console.log("Checkbox is here..");
+            element.value = '';
+        });
+    }
+}
 function $$(id) {
     return document.querySelectorAll(id);
 }
