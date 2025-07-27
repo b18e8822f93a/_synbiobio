@@ -1,27 +1,167 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-143G1RQ0JR"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-143G1RQ0JR');
-  </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
-  <link href="css2.css" rel="stylesheet" />
-  <link href="cdn.css" rel="stylesheet" />
-  <script src="tsc.min.js"></script>
-
-</head>
-
-<body class="lightTheme"></body>
-
-<script src="json/blog.json.js"></script>
-<script>window.onload = () => onloadWindow(blogPageObj)</script>
-
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+    <title>SynbioBio - Blog</title>
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-G8PVHW6XXL"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date());gtag('config','G-G8PVHW6XXL');</script>
+    <link href="./cdn/bootstrap.min.css" rel="stylesheet" />
+    <link href="ui.css" rel="stylesheet" />
+    <link href="styles2.css" rel="stylesheet" />
+    <link href="shop.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="content">
+        <nav class="navbar navbar-expand-md  navbar-light pt-1 pb-1">
+          <div class="container-fluid">
+            <img class="logo" src="logo.svg" />
+            <button class="navbar-toggler" type="button" data-bs-target="#collapsibleNavbar" data-bs-toggle="collapse">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link link_off" id="btCompaniesPage" href="companies">Companies</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link_off" id="btSummaryPage" href="summary">Summary</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link_off" id="btNetworkPage" href="network">Network</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link_on" id="btBlogPage" href="blog">Blog</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <h2 class="myCss pt-2 pb-2">
+        <span class="fw-light"></span> </h2>
+    </div>
+    <div class="container">
+      <div>
+        <div class="container p-1 mt-1 mb-2 d-none d-md-block">
+          <div class="btn-group btn-group-lg btn-group-justified w-100" role="group">
+            <input class="rbIndustry btn-check" id="btnradiorbIndustry0" type="radio" name="rbIndustry" value="All" autocomplete="off" checked="checked"></input>
+            <label class="btn btn-outline-success" for="btnradiorbIndustry0">All</label>
+            <input class="rbIndustry btn-check" id="btnradiorbIndustry1" type="radio" name="rbIndustry" value="SynbioBio" autocomplete="off"></input>
+            <label class="btn btn-outline-success" for="btnradiorbIndustry1">SynbioBio</label>
+            <input class="rbIndustry btn-check" id="btnradiorbIndustry2" type="radio" name="rbIndustry" value="Synbuyo" autocomplete="off"></input>
+            <label class="btn btn-outline-success" for="btnradiorbIndustry2">Synbuyo</label>
+            <input class="rbIndustry btn-check" id="btnradiorbIndustry3" type="radio" name="rbIndustry" value="SynbioCareers" autocomplete="off"></input>
+            <label class="btn btn-outline-success" for="btnradiorbIndustry3">SynbioCareers</label>
+          </div>
+        </div>
+        <div class="container p-1 mt-1 mb-2 d-md-none">
+          <div class="btn-group-vertical btn-group btn-group-lg btn-group-justified w-100" role="group">
+            <input class="rbIndustry btn-check" id="btnradiorbIndustry0" type="radio" name="rbIndustry" value="All" autocomplete="off" checked="checked"></input>
+            <label class="btn btn-outline-success" for="btnradiorbIndustry0">All</label>
+            <input class="rbIndustry btn-check" id="btnradiorbIndustry1" type="radio" name="rbIndustry" value="SynbioBio" autocomplete="off"></input>
+            <label class="btn btn-outline-success" for="btnradiorbIndustry1">SynbioBio</label>
+            <input class="rbIndustry btn-check" id="btnradiorbIndustry2" type="radio" name="rbIndustry" value="Synbuyo" autocomplete="off"></input>
+            <label class="btn btn-outline-success" for="btnradiorbIndustry2">Synbuyo</label>
+            <input class="rbIndustry btn-check" id="btnradiorbIndustry3" type="radio" name="rbIndustry" value="SynbioCareers" autocomplete="off"></input>
+            <label class="btn btn-outline-success" for="btnradiorbIndustry3">SynbioCareers</label>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3" data-all="card" data-unique="synbiocareers" style="border-color:#f5c242">
+        <div class="card-header" style="border-color:#f5c242">Careers</div>
+        <div class="card-body">
+          <p class="card-text">Today we have launched SynbioCareers.com, quite a simply a listing of industry jobs available within the field of synthetic biology.
+</p>
+          <p class="card-text">
+</p>
+          <p class="card-text">Online profiles and accounts are not required, here you will find just the job details, categorised into relevant domains and in an easy to search format.
+</p>
+          <p class="card-text">
+</p>
+          <p class="card-text">From the listings, you can link to a brief about the company with some extracts from their website, to the company website itself or directly to the application form.
+</p>
+          <p class="card-text">
+</p>
+          <p class="card-text">We have also included a summary page where we outline the jobs, both past and present, which have appeared on the website. This is also intended to bolster the bio we build up on each company, we've noticed that the roles advertised give a quite unique window to the functions happening within the walls of the business that are sometimes not immediately apparent from the company website and blogs.</p>
+        </div>
+        <div class="card-footer text-muted d-flex flex-row justify-content-between align-items-center">
+          <span>September 30th 2022</span>
+          <a class="tagSpan" style="background-color:#f5c242; margin-left:3px" href="https://www.SynbioCareers.com">SynbioCareers.com</a>
+        </div>
+      </div>
+      <div class="card mb-3" data-all="card" data-unique="synbiobio" style="border-color:#85adad">
+        <div class="card-header" style="border-color:#85adad">New Site SynbioBio</div>
+        <div class="card-body">
+          <p class="card-text">Hi, in quick succession we have created a new website to act as a listing for all Synthetic Biology companies including those that do not necessarily produce consumer products. Reading so many websites and articles as part of our work for SynBuyo.com we've realised that actually most do not.
+</p>
+          <p class="card-text">
+</p>
+          <p class="card-text">Whilst undertaking this work we've been getting quite familiar with the industry, how it's shaping up and some of the key players and we think it's worth sharing some of the those insights through a database and website for those interested in the industry and how the landscape of interconnected companies is emerging. 
+</p>
+          <p class="card-text">
+</p>
+          <p class="card-text">At this stage in the development of the industry how it may mature over time, to us at least, seems quite unclear. Understanding how this industry may adopt and tweak existing business models such as app store economics and foundry services or overcome it unique challenge through innovation and collaboration is definitely a story we look forward to understanding and sharing.
+</p>
+          <p class="card-text">
+</p>
+          <p class="card-text">Although fundamentally this is a database of companies and their products, services and connections, in recording this data we will inevitably outline the technology, science and computing that are being applied to facilitate the progression and adoption of the industry.
+</p>
+          <p class="card-text">
+</p>
+          <p class="card-text">The name, we're calling the records we have on each of these companies it's company bio, one could argue only people have bios, but as this database describes a company's characteristics, approach, methods and network we think the name works.</p>
+        </div>
+        <div class="card-footer text-muted d-flex flex-row justify-content-between align-items-center">
+          <span>August 31st 2022</span>
+          <a class="tagSpan" style="background-color:#85adad; margin-left:3px" href="https://www.SynbioBio.com">SynbioBio.com</a>
+        </div>
+      </div>
+      <div class="card mb-3" data-all="card" data-unique="synbuyo" style="border-color:#3399ff">
+        <div class="card-header" style="border-color:#3399ff">First Post</div>
+        <div class="card-body">
+          <p class="card-text">Welcome to the SynBuyo website, effectively a listing of available consumer products that have been produced through the application of the engineering practices of Synthetic Biology.
+</p>
+          <p class="card-text">
+</p>
+          <p class="card-text">Why would you want to search out and purchase these analogues over the incumbents produced through existing industrial chemical and agricultural practices?
+</p>
+          <p class="card-text">
+</p>
+          <p class="card-text">Save energy, carbon, space, water, that is the elements we need to help to conserve to reduce the impact of climate change. They are other benefits too, avoid pollutant chemical byproducts, protect ecological diversity, improve animal welfare and potentially higher grade products at reduced prices.
+</p>
+          <p class="card-text">
+</p>
+          <p class="card-text">Wait, there are hardly any products on this site and I can't buy anything, for sure, for now, but soon everything will be on here, cosmetics, foods, cleaning products, textiles, clothing, dyes, paints, pharmaceuticals, you name it. 
+</p>
+          <p class="card-text">
+</p>
+          <p class="card-text">Come back again and see what's new.</p>
+        </div>
+        <div class="card-footer text-muted d-flex flex-row justify-content-between align-items-center">
+          <span>July 11th 2022</span>
+          <a class="tagSpan" style="background-color:#3399ff; margin-left:3px" href="https://www.Synbuyo.com">Synbuyo.com</a>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="content-bottom w-100 d-flex align-items-center">
+        <div class="container">
+          <div class="d-flex flex-column flex-md-row justify-content-between">
+            <span class="footer-references">Copyright <a href="https://www.synthase.co.uk" target="_blank">Synthase</a> Limited 2022. All rights reserved</span>
+            <div class="d-flex align-items-center footer-references">
+              <a href="mailto:contact@synbiobio.com" class="me-2">contact@synbiobio.com</a>
+              <a href="privacy.html" class="me-2">privacy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="tsc.js"></script>
+  </body>
+  <script src="./cdn/jquery-3.3.1.min.js"></script>
+  <script src="./cdn/bootstrap.bundle.min.js"></script>
+  <script>setupRadioButtonFilterHandlerWithClass('btn-check', 'card');</script>
 </html>
