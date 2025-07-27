@@ -1,3 +1,141 @@
+/* all.css */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  user-select: none;
+  -webkit-user-select: none;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.hiding2 {
+  display: none !important;
+  overflow: hidden;
+}
+
+.hiding {
+  display: none;
+  overflow: hidden;
+}.tagSpan {
+
+    letter-spacing: .025rem;
+    font-size: 1.em;
+    box-sizing: border-box;
+    /* flex-basis: 100%; */
+    display: inline-block;
+    border-radius: .2em;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-family: neo-sans, "sans-serif";
+    padding: 0 .4rem;
+    color: #fff;
+    font-weight: 500;
+    background-color: #00cdb2;
+}:root[data-applied-mode="dark"] {
+  --main-color: rgb(48, 52, 53);
+  --main-bg-color:#f7c2c1; 
+
+  --second-bg-color :#c97675; 
+  --third-bg-color: rgb(59, 59, 59);
+  --third-color: #b96260;
+
+  --textA: rgb(240, 232, 235);
+  --dashplease: rgb(255, 246, 230);
+
+  --tbBackground: rgba(41, 41, 41, 0.8);
+  --tdBorder: rgb(95, 95, 94);
+
+  --thBorder: rgb(71, 207, 237);
+  --thBackground: rgb(48, 52, 53);
+
+  --tdBorder: rgb(95, 95, 94);
+  --tdColor: rgb(255, 246, 230);
+
+  --aColor  :rgb(235, 231, 231);
+  --aHoverColor : rgb(184, 180, 180);
+  --btn-outline : 136, 133, 151;
+  --swBackgroundOff :rgb(200, 219, 33);
+  --swBackgroundOn :rgb(219, 107, 33);
+}
+
+:root {
+  --main-color: #2e3031;
+  --main-bg-color: #6db3db;
+  --main-bg-color: #fbfdff;
+
+  --second-colour : #e48583; 
+  --second-bg-color: rgba(230, 224, 224, 0.918);
+
+  --third-bg-color: rgb(59, 59, 59);
+  --third-color: rgb(48, 42, 42);
+
+  --textA:  rgb(14, 14, 14);
+  --dashplease: rgb(255, 246, 230);
+
+  --tbBackground: white;
+  --tdBorder: rgb(159, 159, 16);
+
+  --thBorder: lightblue;
+  --thBackground: white;
+
+  --tdBorder: rgb(165, 170, 169);
+  --tdColor: rgb(48, 52, 53);
+
+  --aColor  :rgb(122, 122, 122);
+  --aHoverColor : rgb(14, 14, 14);
+
+  --btn-outline : 33, 107, 219;
+  --btn-outline2 : rgb(33, 107, 219);
+  --swBackgroundOff :rgb(33, 219, 95);
+  --swBackgroundOn :rgb(219, 33, 142);
+}
+.loader {
+    border: 12px solid #f3f3f3;
+    border-top: 12px solid #3498db;
+    border-radius: 50%;
+    height:  100px;
+    aspect-ratio: 1 / 1;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#dvSpinnerContainer{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .no {
   /* background-color: #645bdf; */
   color: white;
