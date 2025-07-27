@@ -1,5 +1,8 @@
+<!DOCTYPE html>
+<html>
+
 <head>
-  <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-143G1RQ0JR"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -14,9 +17,34 @@
   <link href="cdn.css" rel="stylesheet" />
   <script src="tsc.min.js"></script>
 
+  <style>
+    .btn-check:checked+.btn-outline-primary
+    {
+        background-color: var(--xy)
+    }
+
+    .btn-outline-primary:hover  
+    {
+        background-color: var(--xy)
+    } 
+
+    /* For screens up to 600px wide (typical mobile) */
+    @media (max-width: 600px ) {
+        
+        .product-table {
+            display: none;
+        }
+    }
+
+    </style>
+
 </head>
 
 <body class="lightTheme"> </body>
+<script src="json/json.js"></script>
+<script>window.onload = () => onloadWindow(firmsPageObj)</script>
 
-<script src="privacy.js"></script>
-<script>window.onload = () => onloadWindow(privacyPageObj)</script>
+</html>
+
+  
+
